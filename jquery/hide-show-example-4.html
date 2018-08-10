@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Hide/Show Example 1</title>
+<style>
+.block{
+	border: 1px solid #CCC;
+	padding: 10px;
+	margin-top: 15px;
+	display: none;
+}
+</style>
+</head>
+<body>
+<!-- for hide/show action -->
+<button id="toggle">Toggle</button>
+<div class="block">
+	Test
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+$('#toggle').click(function(){
+	if($('.block').css('display') == 'none'){
+		$('.block').fadeIn();
+	}else{
+		$('.block').fadeOut();
+	}
+});
+</script>
+</body>
+</html>

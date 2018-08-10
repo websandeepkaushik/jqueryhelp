@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tech Guide</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../highlighter/jquery.highlight.css">
+</head>
+<body>
+<div class="tg-sidebar">
+	<div class="tgs-container">
+		<ul>
+			<li>
+				<a href="#">jQuery</a>
+				<ul>
+					<li><a href="#">Hide/Show</a></li>
+					<li><a href="#">Hide/Show</a></li>
+				</ul>
+			</li>
+			<li><a href="#">CSS</a></li>
+		</ul>
+	</div>
+</div>
+<div class="main-container">
+	<div class="page-title">
+		<h1>Element Hide/Show</h1>
+	</div>
+	<div class="helpful-method">
+		<strong>Helpful Method:</strong> hide(), show(), toggle() fade(), slide()
+	</div>
+
+<div class="example-container">
+<h2>Example 1: hide()/show()</h2>
+<div class="example-code">
+<h3>HTML Code</h3>
+<pre class="code" lang="html">
+// for show action
+<button id="show">Show</button>
+
+//for hide action
+<button id="hide">Hide</button>
+
+<div class="block">
+	Test
+</div>
+</pre>
+
+<h3>jQuery Code</h3>
+<pre class="code" lang="jQuery">
+// use show() method
+$('#show').click(function(){
+	$('.block').show();	
+});
+
+// use hide() method
+$('#hide').click(function(){
+	$('.block').hide();
+});
+</pre>
+
+</div>
+<div class="example-result">
+<h3>Result</h3>
+<iframe src="hide-show-example-1.html" style="height: 160px;"></iframe>
+<h3>CSS Code</h3>
+<pre class="code" lang="css">
+.block{
+	display: none;
+}
+</pre>
+</div>
+<div class="clear"></div>
+<div class="note-section">
+	In above example, we have used two seperate buttons to understand the hide/show action. But mostly person want to use only one button for performing hide/show feature. We can do the work by help help of toggle() method. In next example we will explain toggle() method.
+</div>
+</div>
+<hr>
+<div class="example-container">
+<h2>Example 2: toggle()</h2>
+<div class="example-code">
+<h3>HTML Code</h3>
+<pre class="code" lang="html">
+// for hide/show action
+<button id="toggle">Toggle</button>
+
+<div class="block">
+	Test
+</div>
+</pre>
+
+<h3>jQuery Code</h3>
+<pre class="code" lang="jQuery">
+// use toggle() method
+$('#toggle').click(function(){
+	$('.block').toggle();	
+});
+</pre>
+
+</div>
+<div class="example-result">
+<h3>Result</h3>
+<iframe src="hide-show-example-2.html" style="height: 160px;"></iframe>
+<h3>CSS Code</h3>
+<pre class="code" lang="css">
+.block{
+	display: none;
+}
+</pre>
+</div>
+<div class="clear"></div>
+<div class="note-section">
+	In above example, we have used only one button to hide/show. toggle() method check the selecter css property("display"). if selecter have "display:none" than toggle() method performing as a show() method and if selecter have "display: block" or not have display css property that toggle() method performing as a hide().
+</div>
+</div>
+<hr>
+<div class="example-container">
+<h2>Example 3: fade fadeIn()/fadeOut()</h2>
+<div class="example-code">
+<h3>HTML Code</h3>
+<pre class="code" lang="html">
+// for show action
+<button id="show">Show - fadeIn()</button>
+
+//for hide action
+<button id="hide">Hide - fadeOut()</button>
+
+<div class="block">
+	Test
+</div>
+</pre>
+
+<h3>jQuery Code</h3>
+<pre class="code" lang="jQuery">
+// use fadeIn() method
+$('#show').click(function(){
+	$('.block').fadeIn();	
+});
+
+// use fadeOut() method
+$('#hide').click(function(){
+	$('.block').fadeOut();
+});
+</pre>
+
+</div>
+<div class="example-result">
+<h3>Result</h3>
+<iframe src="hide-show-example-3.html" style="height: 160px;"></iframe>
+<h3>CSS Code</h3>
+<pre class="code" lang="css">
+.block{
+	display: none;
+}
+</pre>
+</div>
+<div class="clear"></div>
+<div class="note-section">
+	<p>In above example,<br>
+	fadeIn(): work same as show() method<br>
+	fadeOut(): work same as hide() method<br>
+	But, difference is fadeIn/fadeOut perform with fading effect.</p>
+	<p>we have used two seperate buttons to understand the fadeIn/fadeOut action. In jQuery not available a common method for fadeIn/fadeOut like toggle(). If need to use only one button to fadeIn/fadeOut than need to do on condition based. In next example we will explain it.</p>
+</div>
+</div>
+<hr>
+<div class="example-container">
+<h2>Example 4: fade toggle with fadeIn()/fadeOut()</h2>
+<div class="example-code">
+<h3>HTML Code</h3>
+<pre class="code" lang="html">
+// for hide/show action
+<button id="toggle">Toggle</button>
+
+<div class="block">
+	Test
+</div>
+</pre>
+
+<h3>jQuery Code</h3>
+<pre class="code" lang="jQuery">
+// use fadeIn/fadeOut method
+$('#toggle').click(function(){
+	if($('.block').css('display') == 'none'){
+		$('.block').fadeIn();
+	}else{
+		$('.block').fadeOut();
+	}
+});
+</pre>
+
+</div>
+<div class="example-result">
+<h3>Result</h3>
+<iframe src="hide-show-example-4.html" style="height: 160px;"></iframe>
+<h3>CSS Code</h3>
+<pre class="code" lang="css">
+.block{
+	display: none;
+}
+</pre>
+</div>
+<div class="clear"></div>
+<div class="note-section">
+	In above example, we have used only one button to hide/show. On click, function check the selecter css property("display"). if selecter have "display:none" than fadeIn() method performing and if selecter have "display: block" or not have display css property that fadeOut() method performing
+</div>
+</div>
+<hr>
+<div class="example-container">
+<h2>Example 5: slide - slideDown()/slideUp()</h2>
+<div class="example-code">
+<h3>HTML Code</h3>
+<pre class="code" lang="html">
+// for show action
+<button id="show">Show - slideDown()</button>
+
+//for hide action
+<button id="hide">Hide - slideUp()</button>
+
+<div class="block">
+	Test
+</div>
+</pre>
+
+<h3>jQuery Code</h3>
+<pre class="code" lang="jQuery">
+// use slideDown() method
+$('#show').click(function(){
+	$('.block').slideDown();	
+});
+
+// use slideUp() method
+$('#hide').click(function(){
+	$('.block').slideUp();
+});
+</pre>
+
+</div>
+<div class="example-result">
+<h3>Result</h3>
+<iframe src="hide-show-example-5.html" style="height: 160px;"></iframe>
+<h3>CSS Code</h3>
+<pre class="code" lang="css">
+.block{
+	display: none;
+}
+</pre>
+</div>
+<div class="clear"></div>
+<div class="note-section">
+	<p>In above example,<br>
+	slideDown(): work same as show() method<br>
+	slideUp(): work same as hide() method<br>
+	But, difference is slideDown/slideUp perform with sliding effect.</p>
+	<p>we have used two seperate buttons to understand the fadeIn/fadeOut action. But mostly person want to use only one button for performing hide/show feature. We can do the work by help help of slideToggle() method. In next example we will explain slideToggle() method.</p>
+</div>
+</div>
+<hr>
+<div class="example-container">
+<h2>Example 6: slideToggle()</h2>
+<div class="example-code">
+<h3>HTML Code</h3>
+<pre class="code" lang="html">
+// for hide/show action
+<button id="toggle">Slide Toggle</button>
+
+<div class="block">
+	Test
+</div>
+</pre>
+
+<h3>jQuery Code</h3>
+<pre class="code" lang="jQuery">
+// use slideToggle() method
+$('#toggle').click(function(){
+	$('.block').slideToggle();	
+});
+</pre>
+
+</div>
+<div class="example-result">
+<h3>Result</h3>
+<iframe src="hide-show-example-6.html" style="height: 160px;"></iframe>
+<h3>CSS Code</h3>
+<pre class="code" lang="css">
+.block{
+	display: none;
+}
+</pre>
+</div>
+<div class="clear"></div>
+<div class="note-section">
+	In above example, we have used only one button to hide/show with sliding effect. slideToggle() method check the selecter css property("display"). if selecter have "display:none" than slideToggle() method performing as a slideDown() method and if selecter have "display: block" or not have display css property that slideToggle() method performing as a slideUp().
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="../highlighter/jquery.highlight.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Hide/Show Example 1</title>
+<style>
+.block{
+	border: 1px solid #CCC;
+	padding: 10px;
+	margin-top: 15px;
+	display: none;
+}
+</style>
+</head>
+<body>
+<!-- for show action -->
+<button id="show">Show - fadeIn()</button>
+
+<!-- for hide action -->
+<button id="hide">Hide - fadeOut()</button>
+<div class="block">
+	Test
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+// use show() method
+$('#show').click(function(){
+	$('.block').fadeIn();	
+});
+
+// use hide() method
+$('#hide').click(function(){
+	$('.block').fadeOut();
+});
+</script>
+</body>
+</html>

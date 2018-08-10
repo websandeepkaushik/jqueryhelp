@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Tabs</title>
+<style>
+.tab-section{
+	max-width: 500px;
+}
+.tab{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tab li{
+	display: inline-block;
+}
+.tab a{
+	display: block;
+	padding: 10px;
+	background: #DDD;
+	color: #333;
+	text-decoration: none;
+}
+.tab li.active a{
+	background: #CCC;
+}
+.tab-content{
+	border: 1px solid #CCC;
+	padding: 10px;
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="tab-section">
+	<ul class="tab">
+		<li><a href="#tab-1">Tab 1</a></li>
+		<li><a href="#tab-2">Tab 2</a></li>
+		<li><a href="#tab-3">Tab 3</a></li>
+	</ul>
+	<div id="tab-1" class="tab-content">
+		Test 1
+	</div>
+	<div id="tab-2" class="tab-content">
+		Test 2
+	</div>
+	<div id="tab-3" class="tab-content">
+		Test 3
+	</div>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+$('.tab a').click(function(){
+	var obj = $(this).parents('.tab-section');
+	obj.find('.tab li').removeClass('active');
+	obj.find('.tab-content').hide();
+	$(this).parent('li').addClass('active');
+	obj.find($(this).attr('href')).show();
+	return false;
+});
+
+$('.tab li:first-child a').trigger('click');
+</script>
+</body>
+</html>

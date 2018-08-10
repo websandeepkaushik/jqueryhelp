@@ -1,0 +1,27 @@
+body{margin: 0; font-family: Arial; font-size: 14px; padding-left: 250px;}
+.clear{clear: both;}
+
+.tg-sidebar{position: fixed; width: 250px; height: 100%; top: 0; left: 0; background: #DDD; border-right: 1px solid #FFF; box-shadow: 0 0 5px #333;}
+.tgs-container{padding: 10px;}
+.tg-sidebar ul{margin: 0; padding: 0; list-style: none;}
+.tg-sidebar li{margin: 5px 0; border-top: 1px solid #BBB;}
+.tg-sidebar li:first-child{border-top: none;}
+.tg-sidebar a{display: block; color: #333; text-decoration: none; font-size: 16px; padding: 8px 10px;}
+.tg-sidebar a:hover{background: #BBB;}
+.tg-sidebar li li{border: none; margin: 0;}
+.tg-sidebar li li a{font-size: 14px;}
+.tg-sidebar ul ul{padding-left: 15px;}
+
+.main-container{padding: 25px;}
+
+.page-title{margin-bottom: 15px; border-bottom: 1px solid #CCC; padding-bottom: 10px;}
+h1{margin: 0; font-size: 25px;}
+
+.helpful-method{background: #2a87e5; padding: 10px; color: #FFF; margin-bottom: 15px;}
+
+.example-container{}
+.example-code{width: 48%; float: left;}
+.example-result{width: 48%; float: right;}
+.example-result iframe{border: 1px solid #CCC; padding: 10px; box-sizing: border-box; min-height: 150px; width: 100%;}
+
+.note-section{line-height: 1.4; background: #f3c07d; padding: 10px; margin-bottom: 15px;}
